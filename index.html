@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AYOS Venue | MVP and Showcase</title>
+    <meta
+      name="description"
+      content="Discover pickleball courts connected to AYOS Venue, explore venue websites, and try a guest booking demonstration."
+    />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta
+      property="og:title"
+      content="AYOS Venue | MVP and Showcase"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" />
+
+    <meta
+      property="og:description"
+      content="Find courts. Meet venues. Get on court with AYOS Venue."
+    />
+    <meta property="og:image" content="client-venue/assets/pickleball-courts.jpg" />
+
+    <link rel="icon" href="assets/favicon.svg" />
+    <link
+      rel="preload"
+      href="assets/fonts/BarlowCondensed-SemiBold.ttf"
+      as="font"
+      type="font/ttf"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="energy.css" />
+    <link rel="stylesheet" href="directory.css" />
+    <script src="client-venue/data.js" defer></script>
+    <script src="app.js?v=venue-nav" defer></script>
+    <script src="affiliates.js?v=venue-nav" defer></script>
+    <script src="router.js?v=venue-nav" defer></script>
+    <script src="motion.js" defer></script>
+  </head>
+  <body>
+    <div class="reading-progress" aria-hidden="true"></div>
+    <a class="skip" href="#main">Skip to content</a>
+    <div class="demo-bar">
+      Court discovery, powered by AYOS.
+      <span>AYOS Venue · Demonstration website</span>
+    </div>
+    <header>
+      <a class="brand" href="#/" aria-label="AYOS Venue home"><span class="ayos-mark">AYOS<span>VENUE</span></span></a>
+      <nav aria-label="Main navigation">
+        <a href="#/">Home</a>
+        <a href="#/courts">Find a venue</a>
+        <a href="#/ayos-venue">Product demo</a>
+        <a href="#/showcase">Guided showcase</a>
+      </nav>
+      <a class="button small" href="#/contact?type=demo">For venue owners ↗</a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open navigation">☰</button>
+    </header>
+    <nav id="mobile-menu" class="mobile-menu" hidden aria-label="More navigation">
+      <a href="#/">Home</a>
+      <a href="#/courts">Find a venue</a>
+      <a href="#/ayos-venue">Product demo</a>
+      <a href="#/showcase">Guided showcase</a>
+      <a href="#/contact?type=demo">For venue owners</a>
+    </nav>
+    <main id="main">
+      <noscript
+        >This interactive court directory needs JavaScript enabled. No Java or
+        backend is required.</noscript
+      >
+      <div class="loading wrap">
+        <span class="eyebrow">AYOS VENUE</span>
+        <div class="skeleton"></div>
+        <div class="skeleton short"></div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-top">
+        <a class="brand" href="#/"><span class="ayos-mark">AYOS<span>VENUE</span></span></a>
+        <p>Discover courts.<br />Try the booking journey.</p>
+        <div><a href="#/courts">Find a venue</a><a href="#/ayos-venue">Product demo</a></div>
+        <div><a href="#/showcase">Guided showcase</a><a href="#/contact?type=demo">For venue owners</a></div>
+      </div>
+      <div class="footer-bottom"><span>AYOS Venue · MVP and Showcase</span><a href="#/ayos-venue">powered by ayos technology</a></div>
+      <p class="fine">Breakwater Racket Club is the sample venue. Bookings, payments, and check-ins are simulated in this browser.</p>
+    </footer>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

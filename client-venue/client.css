@@ -1,0 +1,83 @@
+:root {
+  --ink: #15243a;
+  --accent: #ff9c82;
+  --accent-hover: #ff876b;
+  --focus: #984431;
+  --muted: #4e5b6d;
+  --line: #cfd8e3;
+  --surface: #e9eef5;
+  --bg: #f5f7fa;
+}
+html { scroll-behavior: auto; }
+[hidden] { display: none !important; }
+header { height: 76px; }
+header nav a, .mobile-menu a, .footer-bottom > a { display: flex; align-items: center; min-height: 44px; }
+header nav a:hover, footer a:hover { color: var(--focus); }
+header nav a[aria-current], .mobile-menu a[aria-current] { text-decoration: underline; text-underline-offset: 5px; }
+.brand { letter-spacing: 0; }
+.club-mark { width: 36px; height: 36px; flex: none; }
+.button:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.button.secondary:hover, .choice.selected, .choice:hover, .mockup, .pass-footer, .booking-side { background: var(--surface); }
+.button.secondary:hover, header.has-scrolled { border-color: var(--line); }
+.demo-bar { color: var(--bg); }
+header .button, .menu-toggle, .chip, .demo-reset { min-height: 44px; }
+.menu-toggle { min-width: 44px; }
+.mobile-menu { padding: 8px 5%; background: var(--bg); border-bottom: 1px solid var(--line); }
+.client-hero { margin: 0; min-height: 520px; height: min(70svh, 760px); max-height: none; }
+.client-hero > img { filter: brightness(0.8) saturate(0.84); }
+.client-hero::before { content: ""; position: absolute; z-index: 1; inset: 0; background: linear-gradient(90deg, #101d30f5, #101d307d 65%, #101d3044); }
+.client-hero .hero-content { z-index: 2; width: min(100%, 1200px); margin-inline: auto; }
+.client-hero h1 { max-width: 650px; font-size: clamp(56px, 8.5vw, 120px); }
+.client-hero .hero-actions { animation: none; }
+.client-hero a:focus-visible { outline-color: white; }
+.venue-facts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.venue-facts strong { font-size: clamp(20px, 3vw, 36px); overflow-wrap: anywhere; }
+.venue-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.venue-grid .photo { aspect-ratio: 16 / 10; }
+.visit-band { background: var(--surface); }
+.visit-band h3, .court-specs { margin-bottom: 16px; }
+.visit-band p { margin: 16px 0; }
+.visit-band a { display: inline-flex; align-items: center; min-height: 44px; }
+.court-specs div { display: grid; grid-template-columns: minmax(72px, 1fr) 2fr; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.court-specs dd { margin: 0; }
+.court-specs dt { font-weight: 600; }
+.rental-card { padding: 24px; }
+.rental-card p { margin: 8px 0 16px; }
+.footer-bottom { margin-top: 0; align-items: center; flex-wrap: wrap; gap: 16px; }
+.pass-body .text-link { display: flex; align-items: center; justify-content: center; min-height: 44px; }
+.pass-body img { max-width: 100%; height: auto; }
+.booking-side, .booking-main, .summary-row > span { min-width: 0; overflow-wrap: anywhere; }
+.progress span.active { color: var(--ink); }
+.slot.selected { color: var(--ink); }
+.motion-ready [data-reveal]:focus-within { opacity: 1; transform: none; }
+#toast:not(:empty) { display: block; }
+@media (max-width: 900px) {
+  header nav { display: none; }
+  .menu-toggle { display: block; }
+}
+@media (max-width: 767px) {
+  .client-hero { min-height: 440px; height: 63svh; }
+  .client-hero::before { background: #101d30a8; }
+  .client-hero .hero-content { padding: 48px 6%; }
+  .venue-grid { grid-template-columns: 1fr; }
+  .venue-facts { grid-template-columns: 1fr 1fr; gap: 16px; }
+  .venue-facts div:last-child { grid-column: 1 / -1; }
+}
+header .brand { min-width: 0; }
+header .button { flex-shrink: 0; }
+.venue-grid > * { min-width: 0; }
+@media (max-width: 767px) {
+  .venue-grid { grid-template-columns: minmax(0, 1fr); }
+}
+.venue-grid .court-card .photo { width: 100%; height: auto; }
+@media (max-width: 767px) {
+  header { gap: 8px; }
+  header .button.small { padding-inline: 12px; }
+  header .brand { gap: 8px; }
+}
+@media (max-width: 767px) {
+  header .brand { flex: 1 1 0; }
+  header .brand span { min-width: 0; }
+}
+.ayos-visit { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 24px; }
+.ayos-visit h2 { margin-bottom: 12px; }
